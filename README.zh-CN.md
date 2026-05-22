@@ -1,5 +1,7 @@
 # Claude-Codex Bridge
 
+![Claude-Codex Bridge 中文介绍图](docs/assets/claude-codex-bridge-zh.png)
+
 Claude-Codex Bridge 是一个开源的 Claude 与 Codex 双向互通审计、检验工具。
 
 它的目标很简单：让一个模型完成任务后，自动交给另一个模型做第二意见审查，帮助减少模型幻觉、查漏补据、发现没有验证就声称完成的问题。
@@ -208,4 +210,3 @@ printf 'Codex result to audit' | node agent-bridge/bridge.mjs to-claude --mode a
 它不是一个完整多 agent runtime。
 
 它也不会替你判断所有问题。它做的是把 Claude/Codex 之间的审计交接标准化、自动化，并留下证据。
-

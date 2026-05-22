@@ -2,6 +2,8 @@
 
 中文介绍: [README.zh-CN.md](README.zh-CN.md)
 
+![Claude-Codex Bridge overview](docs/assets/claude-codex-bridge-en.png)
+
 Claude-Codex Bridge is an open-source audit and verification bridge for Claude
 Code and Codex. It lets one agent review another agent's work, helping reduce
 model hallucination, missing evidence, unverified "done" claims, and overlooked
