@@ -1,0 +1,17 @@
+.DS_Store
+*.log
+
+# Bridge runtime data generated during local use.
+.agent-bridge/
+
+# Local/editor state.
+.idea/
+.vscode/
+node_modules/
+npm-debug.log*
+
+# Secrets and local environment overrides.
+.env
+.env.*
+!.env.example
+

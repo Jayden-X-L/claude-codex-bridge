@@ -1,0 +1,36 @@
+{
+  "name": "claude-codex-bridge",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Local CLI-first bridge for bidirectional Claude Code and Codex review loops.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Claude-Codex Bridge contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jayden-X-L/claude-codex-bridge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jayden-X-L/claude-codex-bridge/issues"
+  },
+  "homepage": "https://github.com/Jayden-X-L/claude-codex-bridge#readme",
+  "keywords": [
+    "claude",
+    "codex",
+    "bridge",
+    "audit",
+    "agent",
+    "cli"
+  ],
+  "bin": {
+    "claude-codex-bridge": "./agent-bridge/bridge.mjs"
+  },
+  "scripts": {
+    "check": "node --check agent-bridge/bridge.mjs && node --check agent-bridge/install-global.mjs && node --check plugins/claude-codex-bridge/scripts/send-to-codex.mjs && node --check plugins/claude-codex-bridge/scripts/send-to-claude.mjs && node --check plugins/claude-codex-bridge/scripts/send-to-claude-for-audit.mjs && node --check plugins/claude-codex-bridge/scripts/send-file-to-claude.mjs && node --check .claude/skills/claude-codex-bridge/scripts/send-to-codex.mjs && node --check .claude/skills/claude-codex-bridge/scripts/send-file-to-codex.mjs",
+    "doctor": "node agent-bridge/bridge.mjs doctor",
+    "install:global": "node agent-bridge/install-global.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

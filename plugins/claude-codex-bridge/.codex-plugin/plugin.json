@@ -1,0 +1,34 @@
+{
+  "name": "claude-codex-bridge",
+  "version": "0.1.0",
+  "description": "Local bridge workflow for auditing Claude Code work in Codex and sending Codex feedback back to Claude.",
+  "author": {
+    "name": "Claude-Codex Bridge contributors",
+    "url": "https://github.com/Jayden-X-L/claude-codex-bridge"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "codex",
+    "audit",
+    "handoff"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Claude Codex Bridge",
+    "shortDescription": "Audit Claude work in Codex and send feedback back.",
+    "longDescription": "Adds a Codex skill for reading Claude Code handoff files, producing findings-first audits, and forwarding the resulting feedback back to Claude through the local agent bridge.",
+    "developerName": "Claude-Codex Bridge contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Audit the latest Claude handoff",
+      "Send this feedback back to Claude",
+      "Review Claude's bridge inbox"
+    ],
+    "brandColor": "#2563EB"
+  }
+}
