@@ -1,5 +1,17 @@
 # Claude-Codex Bridge
 
+中文介绍: [README.zh-CN.md](README.zh-CN.md)
+
+Claude-Codex Bridge is an open-source bridge for bidirectional review workflows
+between Claude Code and Codex. It helps developers use one model to audit,
+verify, and challenge another model's work, reducing hallucinated completion,
+missing evidence, and unverified claims.
+
+It supports App-to-App, App-to-CLI, and CLI-to-CLI handoffs. The recommended
+default is App-to-CLI: stay in the same Claude/Codex conversation, call the
+other agent through its CLI for a second opinion, and receive the audit result
+back in the current conversation.
+
 Claude-Codex Bridge is a local, CLI-first workflow for running bidirectional
 second-opinion reviews between Claude Code and Codex.
 
@@ -11,7 +23,10 @@ to the current conversation.
 
 - Claude execution -> Codex audit.
 - Codex execution -> Claude audit.
-- CLI-first by default, with optional desktop App delivery modes.
+- App-to-CLI by default, with optional App-to-App delivery modes.
+- Same-conversation audit return when using the CLI path.
+- Helps reduce model hallucination, missing verification, and unsupported
+  "done" claims.
 - Durable run evidence under `.agent-bridge/runs/<runId>/`.
 - `doctor` command for CLI/auth preflight checks and installation guidance.
 - No runtime npm dependencies.
